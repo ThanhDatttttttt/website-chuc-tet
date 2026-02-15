@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Lock, Sparkles } from 'lucide-react';
+import loginBg from "../../11.jpg";
+
+
+
 
 interface LoginScreenProps {
   onLogin: (userName: string) => void;
 }
 
 const USERS: Record<string, string> = {
-  '11/11/1111': 'Nguyễn Văn A',
   '07/01/2006': 'Kiều Duyên',
   '12/10/2006': 'Xuân Đào',
   '20/07/2006': 'Tuấn Kiệt',
@@ -40,10 +43,8 @@ const USERS: Record<string, string> = {
   '04/03/2006': 'Hoàng My',
   '21/12/2005': 'Thanh Bình',
   '27/10/2006': 'Trung Nguyên',
-
+  '11/11/1111': 'Trần Trung Nguyên',
 };
-
-
 
 export const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin }) => {
   const [password, setPassword] = useState('');
@@ -60,9 +61,21 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-red-900">
-      {/* Background decoration */}
-      <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+    <div
+  className="relative min-h-screen flex items-center justify-center overflow-hidden"
+  style={{
+    backgroundImage: `url(${loginBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* lớp phủ để chữ nổi hơn */}
+  <div className="absolute inset-0 z-0 bg-red-950/55" />
+
+  {/* (tuỳ chọn) thêm nhẹ texture để nhìn “lụa” hơn */}
+  <div className="absolute inset-0 z-0 opacity-15 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
+
       
       {/* Animated gradient circles */}
       <motion.div 
@@ -95,13 +108,13 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin }) => {
             className="inline-block mb-4"
           >
             <div className="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto shadow-lg border-4 border-red-600">
-              <span className="text-4xl font-bold text-red-700">Tết</span>
+              <span className="text-4xl font-bold text-red-700">TẾT</span>
             </div>
           </motion.div>
           <h1 className="text-4xl font-bold text-yellow-400 font-['Great_Vibes'] mb-2" style={{ fontFamily: '"Great Vibes", cursive' }}>
-            Xuân Ất Tỵ 2025
+            Xuân Bính Ngọ 2026
           </h1>
-          <p className="text-red-200 text-sm">Nhập mật khẩu để mở phong bao lì xì</p>
+          <p className="text-red-200 text-sm">Nhập mật khẩu để mở lời chúc của bạn</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -133,13 +146,13 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin }) => {
             className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-red-900 font-bold py-3 rounded-xl shadow-lg border border-yellow-300 flex items-center justify-center gap-2 transition-all group"
           >
             <Sparkles className="w-5 h-5 group-hover:animate-spin" />
-            Mở Lì Xì Ngay
+            Mở lời chúc Ngay
           </motion.button>
         </form>
       </motion.div>
       
       <div className="absolute bottom-4 text-center w-full text-red-300/40 text-xs font-mono">
-        Designed with ❤️ for Tet Holiday
+        Được thiết kế bởi Ngô Thành Đạt 
       </div>
     </div>
   );
