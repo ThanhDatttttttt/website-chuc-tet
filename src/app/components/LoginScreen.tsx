@@ -24,7 +24,6 @@ const USERS: Record<string, string> = {
   '04/06/2006': 'Thùy Dương',
   '17/05/2006': 'Huệ Huệ',
   '13/04/2006': 'Thanh Thảo',
-  '24/07/2006': 'Thanh Thảo',
   '09/12/2005': 'Công Tính',
   '12/02/2006': 'Bích Trâm',
   '01/09/2006': 'Ngọc Trinh',
@@ -32,18 +31,20 @@ const USERS: Record<string, string> = {
   '01/11/2006': 'Nhựt Hạo',
   '11/06/2006': 'Anh Thư',
   '17/01/2006': 'Ngọc Trâm',
-  '10/05/2006': 'Kim Trúc',
+  '10/05/2009': 'Kim Trúc',
   '18/05/2006': 'Kim Hoa',
   '14/03/2006': 'Quốc Thành',
   '04/12/2006': 'Trọng Vĩ',
   '30/12/2006': 'Kim Dàng',
   '23/07/2003': 'Tuấn Kiệt',
-  '31/01/2003': 'Kim Ngân',
+  '31/07/2003': 'Kim Ngân',
   '03/10/1993': 'Kim Phúc',
   '04/03/2006': 'Hoàng My',
   '21/12/2005': 'Thanh Bình',
   '27/10/2006': 'Trung Nguyên',
-  '11/11/1111': 'Trần Trung Nguyên',
+  '16/11/2006': 'Đăng Khoa',
+  '07/12/2006': 'Hoàng Châu',
+
 };
 
 export const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin }) => {
