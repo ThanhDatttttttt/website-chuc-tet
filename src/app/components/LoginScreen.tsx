@@ -44,7 +44,7 @@ const USERS: Record<string, string> = {
   '27/10/2006': 'Trung Nguyên',
   '16/11/2006': 'Đăng Khoa',
   '07/12/2006': 'Hoàng Châu',
-
+  '02/03/2006': 'Thái Châu',
 };
 
 export const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin }) => {
